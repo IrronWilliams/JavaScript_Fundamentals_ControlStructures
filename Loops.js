@@ -3,7 +3,7 @@
   Do..While
   While 
   For...In 
-  For..Of
+  For..Of 
   Array.Foreach
   */
  

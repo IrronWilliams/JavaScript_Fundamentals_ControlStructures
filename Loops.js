@@ -5,7 +5,31 @@
   For...In 
   For..Of 
   Array.Foreach
-  */
+
+The most common type of JavaScript loop is called a for loop because it runs "for" a specific number of times.
+For loops are declared with three optional expressions separated by semicolons:
+
+for ([initialization]; [condition]; [final-expression])
+
+The initialization statement is executed one time only before the loop starts. It is typically used to define and 
+setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it 
+evaluates to true. When condition is false at the start of the iteration, the loop will stop executing. 
+This means if condition starts as false, your loop will never execute.
+
+The final-expression is executed at the end of each loop iteration, prior to the next condition check and 
+is usually used to increment or decrement your loop counter.
+
+In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i 
+by 1 in each loop iteration with i++ as our final-expression.
+
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+*/
  
 
 //For Loop.  Can interrupt a for loop using 'break' and fast forward to next iteration using 'continue'
@@ -15,7 +39,8 @@ for (let i =0; i < list.length; i++) {
   //  console.log(i) //returns index
 }
 
-//Do...While
+//Do...While loop will first do one pass of the code inside the loop no matter what, and then continue to run 
+//the loop while the specified condition evaluates to true
 let list2 = ['d','o','g']
 let i=0
 do {
@@ -70,4 +95,18 @@ list5.forEach((item, index) => {
 list5.forEach(item => console.log(item))
 
 
+/* 
+If you have a multi-dimensional array, you can use the same logic to loop through both the array and any sub-arrays. 
 
+var arr = [
+  [1,2], [3,4], [5,6]
+];
+for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+
+This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the 
+.length of arr[i], since arr[i] is itself an array.
+*/
